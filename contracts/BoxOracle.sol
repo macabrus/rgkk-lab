@@ -20,6 +20,7 @@ contract BoxOracle {
     function setWinner(uint8 _player) public ownerOnly {
         winner = _player;
     }
+    
     modifier ownerOnly {
         if (msg.sender != owner) {
             revert();
